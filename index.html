@@ -363,15 +363,15 @@
   .stat-grid .unit{font-size:21px;font-weight:500;color:var(--main)}
 
   .solution-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px; }
-  .sol-card{background:#F9F9F9;border:1px solid #CDCDCD;border-radius:var(--radius);padding:22px;opacity:.8}
+  .sol-card{background:#F9F9F9;border:1px solid #CDCDCD;border-radius:var(--radius);padding:22px;opacity:.8;display:flex;flex-direction:column}
   .solution-grid .sol-card{grid-column:span 2; margin-top:40px;}
   .solution-grid .sol-card:nth-child(4){grid-column:2 / span 2}
   .solution-grid .sol-card:nth-child(5){grid-column:4 / span 2}
   .sol-card .tag{font-size:18px;font-weight:700;color:var(--main);margin-bottom:8px}
-  .sol-card h3{font-size:25px;font-weight:700;line-height:1.35;margin-bottom:16px}
-  .sol-card p{font-size:21px;color:var(--text2);line-height:1.6;margin-bottom:18px}
+  .sol-card h3{font-size:25px;font-weight:700;line-height:1.35;margin-bottom:16px;min-height:calc(2 * 1.35em)}
+  .sol-card p{font-size:21px;color:var(--text2);line-height:1.6;margin-bottom:18px;min-height:calc(3 * 1.6em)}
   .sol-card .illust{
-    aspect-ratio:4/3;border-radius:var(--radius);background:#fff;overflow:hidden;
+    margin-top:auto;width:100%;flex:0 0 auto;aspect-ratio:4/3;border-radius:var(--radius);background:#fff;overflow:hidden;
     border:0.5px solid var(--border);display:flex;align-items:center;justify-content:center;
     color:var(--text-muted);font-size:12px;
   }
@@ -824,7 +824,7 @@ const solutions = [
 // 작품 파일 넣는 법: files/ 폴더에 파일(영문 이름 권장)을 넣고 카드에 file:"files/이름.pdf" 추가 (pdf·이미지·mp4 자동 인식)
 const workData = {
   "마케팅": {sub:"타깃을 분석하고 메시지를 설계하는 일", items:[
-    {title:"자동화 프로그램 홍보", sub:"프로그램 홍보·배포 · 마케팅", type:"직접 만든 자동화 프로그램의 신규 사용자 확보 (스레드·인스타·블로그 퍼널)", tool:"-", note:"설문 101건으로 기대 기능을 먼저 검증하고, 스레드→설문→구매 퍼널로 배포 · 19명이 설치 후 이용(14명은 2주간 5일 이상 사용) · 구매 문의 2건 발생", file:"files/자동화프로그램_홍보.pdf", thumbnailWork:"images/work/자동화홍보.png", thumbnailAbout:"images/자동화홍보.png"},
+    {title:"자동화 프로그램 홍보", sub:"프로그램 홍보·배포 · 마케팅", type:"직접 만든 자동화 프로그램의 신규 사용자 확보 (스레드·인스타·블로그 퍼널)", tool:"-", note:"설문 101건으로 기대 기능을 먼저 검증하고, 스레드→설문→구매 퍼널로 배포 · 19명이 설치 후 이용(14명은 2주간 5일 이상 사용) · 구매 문의 2건 발생", file:"files/자동화프로그램_홍보.pdf", url:"https://www.instagram.com/reel/DeJ8Bf9PrBL/", urlLabel:"인스타그램 릴스 보기", thumbnailWork:"images/work/자동화홍보.png", thumbnailAbout:"images/자동화홍보.png"},
     {title:"처음 만나는 대한민국", sub:"홍보 영상 콘텐츠 · 마케팅", type:"신규 관광객 유입 홍보 콘텐츠 기획 (팀 프로젝트)", tool:"-", note:"관광 트렌드·경쟁국 분석에서 '가고 싶은 한국 → 갈 수 있는 한국'이라는 USP를 도출하고, 공항→지하철→시장→한강 동선을 캐릭터로 따라가는 인스타그램 릴스 콘텐츠와 공유율 중심 KPI를 설계", file:"files/Super Korea_4조.pdf", url:"https://www.instagram.com/reel/Dbvk3LVu1Fd/", urlLabel:"인스타그램 릴스 보기", thumbnailWork:"images/work/처음만나는대한민국.png", thumbnailAbout:"images/처음만나는대한민국.png"},
     {title:"모야 ZIP 블로그 운영", sub:"SNS 콘텐츠 · 마케팅", type:"AI 콘텐츠 블로그 기획·운영 (1인)", tool:"-", note:"기능 소개가 아닌 직접 테스트·시행착오 중심으로 차별화 · 4개월간 6월 194회→9월 2,527회(약 13배), 검색 유입 67%, 누적 방문자 1만 명 · 애드포스트 승인, AI 관련 광고 협업 2건", file:"files/모야ZIP_블로그운영.pdf", thumbnailWork:"images/work/블로그운영.png", thumbnailAbout:"images/블로그운영.png"},
     {title:"리에티 선글라스", sub:"메타·DA 광고 · 마케팅", type:"메타 광고·캐러셀·네이버 DA 소재 제작 (가상 프로젝트)", tool:"-", note:"무신사 리뷰 2건뿐인 제품의 구매 망설임을 '가성비 추천'+얼굴형 비교 컷으로 보완 · 정보 7 : 홍보 3 비율로 카드뉴스 5P, 메타 광고, 네이버 DA를 포맷별로 제작 · AI 모델 컷 활용", file:"files/리에티_메타광고.pdf", thumbnailWork:"images/work/리에티광고.png", thumbnailAbout:"images/리에티광고.png"},
